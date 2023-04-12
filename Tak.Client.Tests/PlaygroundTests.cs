@@ -1,13 +1,12 @@
-namespace Tak.Client.Tests
+namespace Tak.Client.Tests;
+
+[TestFixture]
+public class PlaygroundTests
 {
-    [TestFixture]
-    public class PlaygroundTests
+    [Test]
+    public async Task End2End()
     {
-        [Test]
-        public async Task End2End()
-        {
-            var takClient = new TakClient(@"C:\Users\Meadors\Downloads\atak.zip");
-            await takClient.ConnectAsync();
-        }
+        var takClient = new TakClient(@"C:\Users\Meadors\Downloads\atak.zip");
+        await takClient.ConnectAsync();
     }
 }

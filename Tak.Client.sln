@@ -1,9 +1,9 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tak.Client", "Tak.Client.csproj", "{62480EF6-CB10-4D86-808F-89EFDC562C74}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tak.Client", "Tak.Client\Tak.Client.csproj", "{62480EF6-CB10-4D86-808F-89EFDC562C74}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tak.Client.Tests", ".\Tak.Client.Tests\Tak.Client.Tests.csproj", "{88C804B8-6BAC-4B92-8E40-A69867EA2C80}"
 EndProject
