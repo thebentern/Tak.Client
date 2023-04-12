@@ -10,6 +10,8 @@ using System.Runtime.ConstrainedExecution;
 using Tak.Client.Generated;
 using System.Xml.Serialization;
 using System.Linq;
+using System.IO;
+using System.IO.Pipes;
 
 namespace Tak.Client;
 
@@ -88,9 +90,12 @@ public class TakClient
         var pref = manifest.Preference.First(p => p.Name == PrefsKey);
         var certFileName = Path.GetFileName(pref.Entry.First(e => e.Key == CertLocationKey).Text);
         var prefEntry = manifest.Preference.First(e => e.Name.Contains("preference.pref"));
+        var certStream = new MemoryStream();
 
         var certEntry = archive.Entries.First(e => e.Name.Contains(certFileName));
-        var cert = new X509Certificate(, pref.Entry.FirstOrDefault(e => e.Key == CertPasswordKey)?.Text);
+        certEntry.Open().CopyToAsync(certStream);
+
+        var cert = new X509Certificate(certStream.ToArray(), pref.Entry.FirstOrDefault(e => e.Key == CertPasswordKey)?.Text);
 
         return new X509CertificateCollection() { cert };
     }
