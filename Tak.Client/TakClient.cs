@@ -56,6 +56,7 @@ public class TakClient
         var certCollection = certCollectionProvider.GetCollection(manifest);
 
         client.Connect(host, port);
+        sslStream = new SslStream(client.GetStream(), false, new RemoteCertificateValidationCallback(CertificateValidationCallback));
 
         await sslStream.AuthenticateAsClientAsync(host, certCollection, false);
     }
