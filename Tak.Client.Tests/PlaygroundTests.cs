@@ -1,3 +1,5 @@
+using dpp.cot;
+
 namespace Tak.Client.Tests;
 
 [TestFixture]
@@ -7,6 +9,11 @@ public class PlaygroundTests
     public async Task End2End()
     {
         var takClient = new TakClient(@"C:\Users\Meadors\Downloads\atak.zip");
-        await takClient.ConnectAsync();
+        await takClient.ListenAsync(cotEventHandler);
+    }
+
+    private async Task cotEventHandler(Event arg)
+    {
+        await Task.CompletedTask;
     }
 }
