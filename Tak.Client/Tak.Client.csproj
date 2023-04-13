@@ -5,8 +5,8 @@
     <RootNamespace>TheBentern.Tak.Client</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <PackageLicenseFile>../LICENSE</PackageLicenseFile>
-    <PackageReadmeFile>../README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageId>Tak.Client</PackageId>
     <Title>Tak.Client</Title>
     <IncludeSymbols>True</IncludeSymbols>
@@ -18,6 +18,17 @@
 
   <ItemGroup>
     <PackageReference Include="dpp.cot" Version="1.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
