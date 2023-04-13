@@ -8,6 +8,8 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageId>Tak.Client</PackageId>
+    <Title>Tak.Client</Title>
+    <IncludeSymbols>True</IncludeSymbols>
     <Authors>Ben Meadors</Authors>
     <Company>TheBentern</Company>
     <PackageDescription>A simple C# client for asynchronously consuming CoT events from a TAK Server over SSL</PackageDescription>

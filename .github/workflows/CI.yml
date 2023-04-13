@@ -92,8 +92,8 @@ jobs:
       run: dotnet restore
     - name: Build solution and generate NuGet package
       run: | 
-        dotnet build -c Release -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }}
-        dotnet pack -c Release -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }}
+        dotnet build -c Release -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }} -p:NuGetVersion=${{ steps.version.outputs.version }}
+        dotnet pack -c Release -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }} -p:NuGetVersion=${{ steps.version.outputs.version }}
           
     - name: Publish package to nuget
       run: dotnet nuget push ./**/Tak.Client.*.nupkg --skip-duplicate --api-key ${{secrets.GITHUB_TOKEN}} --source "github"
