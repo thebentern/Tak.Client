@@ -1,6 +1,6 @@
 using dpp.cot;
 
-namespace Tak.Client.Tests;
+namespace TheBentern.Tak.Client.Tests;
 
 [TestFixture]
 public class PlaygroundTests

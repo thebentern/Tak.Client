@@ -1,4 +1,4 @@
-namespace Tak.Client.Tests;
+namespace TheBentern.Tak.Client.Tests;
 
 [TestFixture]
 public class TakClientTests

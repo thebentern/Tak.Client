@@ -6,11 +6,11 @@ using System.Text.RegularExpressions;
 using System.Text;
 using System.Xml;
 using System.IO.Compression;
-using Tak.Client.Generated;
-using Tak.Client.Providers;
+using TheBentern.Tak.Client.Generated;
+using TheBentern.Tak.Client.Providers;
 using System.Xml.Serialization;
 
-namespace Tak.Client;
+namespace TheBentern.Tak.Client;
 
 public class TakClient
 {

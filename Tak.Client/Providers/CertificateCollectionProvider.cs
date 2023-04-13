@@ -1,9 +1,9 @@
 ﻿
 using System.IO.Compression;
 using System.Security.Cryptography.X509Certificates;
-using Tak.Client.Generated;
+using TheBentern.Tak.Client.Generated;
 
-namespace Tak.Client.Providers;
+namespace TheBentern.Tak.Client.Providers;
 
 internal class CertificateCollectionProvider
 {
