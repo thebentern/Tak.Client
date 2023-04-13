@@ -2,11 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-	<RootNamespace>TheBentern.Tak.Client</RootNamespace>
-	<ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>TheBentern.Tak.Client</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-	<PackageLicenseFile>LICENSE</PackageLicenseFile>
-	<PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageId>Tak.Client</PackageId>
+    <Authors>Ben Meadors</Authors>
+    <Company>TheBentern</Company>
+    <PackageDescription>A simple C# client for asynchronously consuming CoT events from a TAK Server over SSL</PackageDescription>
+    <RepositoryUrl>https://github.com/thebentern/Tak.Client</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

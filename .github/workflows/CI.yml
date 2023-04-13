@@ -96,7 +96,7 @@ jobs:
         dotnet pack -c Release -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }}
           
     - name: Publish package to nuget
-      run: dotnet nuget push ./**/Tak.Client.*.nupkg --skip-duplicate -k ${{secrets.NUGET_TOKEN}} --source https://api.nuget.org/v3/index.json
+      run: dotnet nuget push ./**/Tak.Client.*.nupkg --skip-duplicate --api-key ${{secrets.GITHUB_TOKEN}} --source "github"
 
 
     - name: Create release
