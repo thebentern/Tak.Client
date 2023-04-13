@@ -97,7 +97,7 @@ jobs:
         dotnet pack ./Tak.Client/Tak.Client.csproj -c Release -p:AssemblyVersion=${{ steps.version.outputs.version }} -p:Version=${{ steps.version.outputs.version }}
           
     - name: Publish package to nuget
-      run: dotnet nuget push ./**/Tak.Client.*.nupkg --skip-duplicate --api-key ${{secrets.GITHUB_TOKEN}} --source "github"
+      run: dotnet nuget push ./**/Tak.Client.*.nupkg --skip-duplicate --api-key ${{secrets.GITHUB_TOKEN}} --source "https://nuget.pkg.github.com/thebentern/index.json"
 
 
     - name: Create release
